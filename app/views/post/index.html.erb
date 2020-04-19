@@ -1,0 +1,19 @@
+<h1 class="text-center m-5">ARTICULOS</h1>
+<% @post.each do |post| %>
+    <div class="card mb-5" style="width: 25rem; margin: auto">
+        <div class="card-body">
+            <ul>
+            <h5 class="card-title"><%=post.title %></h5>
+            <p class="card-text"><%=post.created_at%></p>
+        </div>
+            <td><img src="<%= post.image_url %>" width=100%></td>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><%=post.content %></li>
+            </ul>  
+    </div>
+<%end%>
+
+
+
+
+
