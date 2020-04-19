@@ -4,13 +4,13 @@ class PostController < ApplicationController
   
   def index
       @post = Post.order("created_at DESC").all
-    end
-  
-    def create
-      @post = Post.create(title: params[:title], image_url: params[:image_url], content: params[:content])
-    end
+    end     
 
     def dashboard
+    end
+
+    def create
+      @post = Post.create(title: params[:title], image_url: params[:image_url], content: params[:content])
     end
   
        
